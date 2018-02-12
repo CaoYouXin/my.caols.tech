@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>list.sliders research</title>
+  <style>
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+      position: relative;
+      width: 80vw;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    ul>li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transition: left 1s, top 1s, opacity 1s cubic-bezier(0, 1, 0, 1);
+      font-size: 30px;
+    }
+
+    ul>li.right {
+      left: 100%;
+      opacity: 0;
+    }
+
+    ul>li.left {
+      left: -100%;
+    }
+
+    ul>li.top {
+      top: -100%;
+    }
+
+    ul>li.bottom {
+      top: 100%;
+    }
+
+    ul>li:nth-child(1) {
+      background-color: bisque;
+    }
+
+    ul>li:nth-child(2) {
+      background-color: aqua;
+    }
+
+    ul>li:nth-child(3) {
+      color: white;
+      background-color: brown;
+    }
+
+    ul>li:nth-child(4) {
+      background-color: chartreuse;
+    }
+
+    ul>li:nth-child(4) {
+      background-color: aliceblue;
+    }
+
+    p {
+      position: relative;
+      top: 0;
+      opacity: 1;
+      transition: left 1s, top 1s, opacity 1s cubic-bezier(1, .5, 0, .5);
+    }
+
+    p.fade-in-bottom {
+      top: 1em;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <p class="fade-in-bottom">为此，我们为韩国小姐姐们准备了奥运装备虚拟试衣镜，而在“未来商店”里可以找到历届奥运会纪念品和最新的北京冬奥会纪念商品。</p>
+    </li>
+    <li class="right">
+      <p>为此，我们为韩国小姐姐们准备了奥运装备虚拟试衣镜，而在“未来商店”里可以找到历届奥运会纪念品和最新的北京冬奥会纪念商品。</p>
+    </li>
+    <li class="left">
+      <p>为此，我们为韩国小姐姐们准备了奥运装备虚拟试衣镜，而在“未来商店”里可以找到历届奥运会纪念品和最新的北京冬奥会纪念商品。</p>
+    </li>
+    <li class="top">
+      <p>为此，我们为韩国小姐姐们准备了奥运装备虚拟试衣镜，而在“未来商店”里可以找到历届奥运会纪念品和最新的北京冬奥会纪念商品。</p>
+    </li>
+    <li class="bottom">
+      <p>为此，我们为韩国小姐姐们准备了奥运装备虚拟试衣镜，而在“未来商店”里可以找到历届奥运会纪念品和最新的北京冬奥会纪念商品。</p>
+    </li>
+  </ul>
+</body>
+
+</html>
