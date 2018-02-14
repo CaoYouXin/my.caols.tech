@@ -1,6 +1,6 @@
+import './index.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './index.css';
 
 import { toggleIndicator, showIndicator, hideIndicator } from '../../actions';
 // import throttle from 'lodash/throttle';

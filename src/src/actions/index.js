@@ -1,11 +1,3 @@
-export const test = () => ({
-  type: 'UPDATE_SCENE2D',
-  key: 'g',
-  scene: {
-    a: 9
-  }
-})
-
 export const showIndicator = (...keys) => ({
   type: 'SHOW_INDICATORS',
   keys

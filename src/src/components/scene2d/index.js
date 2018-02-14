@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import './index.css';
+import React, { Component } from 'react';
 
 class Scene2d extends Component {
   render() {

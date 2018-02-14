@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
 import './App.css';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import { test } from './actions'
 
 import {
   PagerIndicator,
@@ -32,9 +30,4 @@ class App extends Component {
   }
 }
 
-export default connect(
-  null,
-  (dispatch) => ({
-    test: () => dispatch(test())
-  })
-)(App);
+export default connect()(App);
