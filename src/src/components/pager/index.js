@@ -1,4 +1,8 @@
 import './index.css';
+
+import Next from './next.png';
+import Prev from './pre.png';
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -95,11 +99,22 @@ class InternalPager extends Component {
 
   render() {
     return (
-      <div className="pager working"
-        ref={elem => { this.client = elem; }}
-        onTouchStart={e => this.start(e.touches)}
-        onTouchEnd={e => this.end()}
-        onTouchMove={e => this.moving(e.touches)}>
+      <div>
+        <div className="pager working right bottom box"
+          ref={elem => { this.client = elem; }}
+          // onMouseDown={e => this.start([{ clientX: e.clientX, clientY: e.clientY }])}
+          // onMouseMove={e => this.moving([{ clientX: e.clientX, clientY: e.clientY }])}
+          // onMouseUp={e => this.end()}
+          onTouchStart={e => this.start(e.touches)}
+          onTouchMove={e => this.moving(e.touches)}
+          onTouchEnd={e => this.end()}>
+        </div>
+        <div className="next mid box working">
+          <img src={Next} alt="Next" onClick={e => this.props.nextFrame()} />
+        </div>
+        <div className="pre mid box working">
+          <img src={Prev} alt="Prev" onClick={e => this.props.prevFrame()} />
+        </div>
       </div>
     )
   }

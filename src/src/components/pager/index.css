@@ -11,3 +11,33 @@
 .pager.working {
   display: block;
 }
+
+.next, .pre {
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  display: none;
+}
+
+.next {
+  right: 0;
+}
+
+.pre {
+  left: 0;
+}
+
+.next.working, .pre.working {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pager.working {
+    display: none;
+  }
+  .next.working, .pre.working {
+    display: block;
+  }
+}

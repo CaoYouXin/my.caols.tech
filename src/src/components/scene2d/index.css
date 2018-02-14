@@ -2,6 +2,7 @@ ul.scene2d {
   list-style: none;
   position: relative;
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 ul.scene2d>li {
