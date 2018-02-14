@@ -5,19 +5,20 @@ import { connect } from 'react-redux';
 import {
   PagerIndicator,
   Pager,
+  Restart,
   Scene2d,
   scene2dFrame,
   Test
 } from './components';
 
-const Test1 = scene2dFrame(Test, { bgColor: '#000' });
-const Test2 = scene2dFrame(Test, { bgColor: '#666' });
-const Test3 = scene2dFrame(Test, { bgColor: '#ccc' });
+const Test1 = scene2dFrame(Test, 'g', 1, { bgColor: '#333' });
+const Test2 = scene2dFrame(Test, 'g', 2, { bgColor: '#666' });
+const Test3 = scene2dFrame(Test, 'g', 3, { bgColor: '#999' });
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="root">
         <Scene2d location={{ width: "100vw", height: "100vh" }}>
           <Test1 />
           <Test2 />
@@ -25,6 +26,7 @@ class App extends Component {
         </Scene2d>
         <PagerIndicator />
         <Pager />
+        <Restart />
       </div>
     );
   }

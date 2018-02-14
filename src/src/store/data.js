@@ -2,7 +2,7 @@ export const data = {
   scene2d: {
     g: {
       cur: 0,
-      changing: false,
+      moving: false,
       percentage: 0
     }
   },

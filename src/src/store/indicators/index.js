@@ -1,15 +1,17 @@
 export const indicators = (state = {}, action) => {
-  const ret = { ...state };
   switch (action.type) {
     case 'SHOW_INDICATORS':
-      action.keys.forEach((key) => { ret[key] = true; })
-      return ret;
+      state = { ...state };
+      action.keys.forEach((key) => { state[key] = true; })
+      return state;
     case 'HIDE_INDICATORS':
-      action.keys.forEach((key) => { ret[key] = false; })
-      return ret;
+      state = { ...state };
+      action.keys.forEach((key) => { state[key] = false; })
+      return state;
     case 'TOGGLE_INDICATORS':
-      action.keys.forEach((key) => { ret[key] = !ret[key]; })
-      return ret;
+      state = { ...state };
+      action.keys.forEach((key) => { state[key] = !state[key]; })
+      return state;
     default:
       return state;
   }

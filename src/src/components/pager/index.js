@@ -2,8 +2,9 @@ import './index.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { toggleIndicator, showIndicator, hideIndicator } from '../../actions';
 // import throttle from 'lodash/throttle';
+
+import { toggleIndicator, showIndicator, hideIndicator, nextFrame, prevFrame } from '../../actions';
 
 class InternalPager extends Component {
   // constructor(props) {
@@ -53,8 +54,8 @@ class InternalPager extends Component {
     }
 
     this.props.hideIndicator();
-    console.log('moving total', this.client.clientWidth, 'at', this.endPoint, 'so',
-      (Math.abs(this.endPoint - this.startPoint) * 100 / this.client.clientWidth).toFixed(2), '%');
+    this.percentage = Math.abs(this.endPoint - this.startPoint) * 100 / this.client.clientWidth;
+    console.log('moving total', this.client.clientWidth, 'at', this.endPoint, 'so', this.percentage.toFixed(2), '%');
   }
 
   end() {
@@ -78,12 +79,17 @@ class InternalPager extends Component {
       return;
     }
 
-    if (Math.abs(this.endPoint - this.startPoint) < this.client.clientWidth / 2) {
+    if (this.percentage < 36) {
       this.props.showIndicator();
       console.log('end', 'BUT not enough', 'sending ZERO');
       return;
     }
 
+    if (!this.toTheRight) {
+      this.props.nextFrame();
+    } else {
+      this.props.prevFrame();
+    }
     console.log('end', 'go to the', this.toTheRight ? 'RIGHT' : 'LEFT', 'end');
   }
 
@@ -104,7 +110,9 @@ const Pager = connect(
   (dispatch) => ({
     toggleIndicator: () => dispatch(toggleIndicator('all')),
     showIndicator: () => dispatch(showIndicator('all')),
-    hideIndicator: () => dispatch(hideIndicator('all'))
+    hideIndicator: () => dispatch(hideIndicator('all')),
+    nextFrame: () => dispatch(nextFrame('g')),
+    prevFrame: () => dispatch(prevFrame('g'))
   })
 )(InternalPager);
 

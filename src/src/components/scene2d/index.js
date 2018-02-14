@@ -1,5 +1,6 @@
 import './index.css';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Scene2d extends Component {
   render() {
@@ -12,15 +13,27 @@ class Scene2d extends Component {
   }
 }
 
-const scene2dFrame = (WrappedComponent, props) => {
+const scene2dFrame = (WrappedComponent, key, idx, props) => {
   class Frame extends Component {
+    // shouldComponentUpdate(nextProps, nextState) {
+    //   console.log(nextProps, nextState);
+    //   return true;
+    // }
+
     render() {
+      const { cur } = this.props;
       return (
-        <li><WrappedComponent {...props} /></li>
+        <li className={`${idx < cur ? 'left' : ''} ${idx > cur ? 'right' : ''}`}>
+          <WrappedComponent {...props} />
+        </li>
       );
     }
   }
-  return Frame;
+  return connect(
+    (store) => ({
+      cur: store.scene2d[key].cur
+    })
+  )(Frame);
 }
 
 export { Scene2d, scene2dFrame };

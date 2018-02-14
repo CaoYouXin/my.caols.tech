@@ -1,9 +1,11 @@
 import '../index.css';
 import './index.css';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+
 import Hand from './hand-up.png';
 import Finger from './finger-down.png';
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class InternalPagerIndicator extends Component {
   render() {
