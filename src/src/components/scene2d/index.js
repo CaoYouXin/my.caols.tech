@@ -4,17 +4,23 @@ import './index.css';
 class Scene2d extends Component {
   render() {
     return (
-      <ul className="scene2d">
-        {childrens}
+      <ul className="scene2d"
+        style={this.props.location}>
+        {this.props.children}
       </ul>
     );
   }
 }
 
-const scene2d = (key) => {
-
+const scene2dFrame = (WrappedComponent, props) => {
+  class Frame extends Component {
+    render() {
+      return (
+        <li><WrappedComponent {...props} /></li>
+      );
+    }
+  }
+  return Frame;
 }
 
-const scene2dFrame = (WrappedComponent) => { }
-
-export { scene2d, scene2dFrame };
+export { Scene2d, scene2dFrame };

@@ -1,0 +1,30 @@
+@keyframes moving_right_to_left {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(30%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-36%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.moving-right-to-left {
+  position: relative;
+  top: -10%;
+  transform-origin: 50% 50% 0;
+  animation: 2s linear 0s infinite normal both running moving_right_to_left;
+}
+
+.static-bottom {
+  position: relative;
+  top: -1%;
+}

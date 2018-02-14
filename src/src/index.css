@@ -1,5 +1,28 @@
-body {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  border: none;
+  box-sizing: border-box;
+}
+
+.box {
+  text-align: center;
+}
+
+.box>*, .box:after {
+  display: inline-block;
+}
+
+.mid.box>*, .mid.box:after {
+  vertical-align: middle;
+}
+
+.bottom.box>*, .bottom.box:after {
+  vertical-align: bottom;
+}
+
+.box:after {
+  content: '';
+  width: 0;
+  height: 100%;
 }

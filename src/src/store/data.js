@@ -1,8 +1,13 @@
 export const data = {
   scene2d: {
     g: {
-      a: 1
+      cur: 0,
+      changing: false,
+      percentage: 0
     }
+  },
+  indicators: {
+    all: true
   }
 };
 
