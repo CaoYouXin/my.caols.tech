@@ -17,14 +17,26 @@
   }
 }
 
-.moving-right-to-left {
+.hand-img {
   position: relative;
   top: -10%;
   transform-origin: 50% 50% 0;
   animation: 2s linear 0s infinite normal both running moving_right_to_left;
 }
 
+.next-img {
+  position: relative;
+  top: -20%;
+  left: -2%;
+}
+
 .static-bottom {
   position: relative;
   top: -1%;
+}
+
+@media (min-width: 768px) {
+  .hand-img {
+    animation: none;
+  }
 }

@@ -20,3 +20,20 @@
   padding: 0.5em;
   border-radius: 0.255rem;
 }
+
+.for-small.indicator.show {
+  display: block;
+}
+
+.for-large.indicator.show {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .for-small.indicator.show {
+    display: none;
+  }
+  .for-large.indicator.show {
+    display: block;
+  }
+}

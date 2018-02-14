@@ -110,10 +110,16 @@ class InternalPager extends Component {
           onTouchEnd={e => this.end()}>
         </div>
         <div className="next mid box working">
-          <img src={Next} alt="Next" onClick={e => this.props.nextFrame()} />
+          <img src={Next} alt="Next" onClick={e => {
+            this.props.hideIndicator();
+            this.props.nextFrame();
+          }} />
         </div>
         <div className="pre mid box working">
-          <img src={Prev} alt="Prev" onClick={e => this.props.prevFrame()} />
+          <img src={Prev} alt="Prev" onClick={e => {
+            this.props.hideIndicator();
+            this.props.prevFrame();
+          }} />
         </div>
       </div>
     )
