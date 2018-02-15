@@ -1,38 +1,38 @@
 @keyframes moving_right_to_left {
   from {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(200px);
   }
   20% {
     opacity: 1;
-    transform: translateX(30%);
+    transform: translateX(160px);
   }
   80% {
     opacity: 1;
-    transform: translateX(-36%);
+    transform: translateX(-160px);
   }
   to {
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-200px);
   }
 }
 
 .hand-img {
   position: relative;
-  top: -10%;
+  top: -100px;
   transform-origin: 50% 50% 0;
   animation: 2s linear 0s infinite normal both running moving_right_to_left;
 }
 
 .next-img {
   position: relative;
-  top: -20%;
-  left: -2%;
+  top: -200px;
+  left: -20px;
 }
 
 .static-bottom {
   position: relative;
-  top: -1%;
+  top: -20px;
 }
 
 @media (min-width: 768px) {
