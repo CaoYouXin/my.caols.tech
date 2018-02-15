@@ -13,7 +13,7 @@ class Scene2d extends Component {
   }
 }
 
-const scene2dFrame = (WrappedComponent, key, idx, props) => {
+const scene2dFrame = (WrappedComponent, key, idx, color) => {
   class Frame extends Component {
     // shouldComponentUpdate(nextProps, nextState) {
     //   console.log(nextProps, nextState);
@@ -23,8 +23,9 @@ const scene2dFrame = (WrappedComponent, key, idx, props) => {
     render() {
       const { cur } = this.props;
       return (
-        <li className={`${idx < cur ? 'left' : ''} ${idx > cur ? 'right' : ''}`}>
-          <WrappedComponent {...props} />
+        <li className={`${idx < cur ? 'left' : ''} ${idx > cur ? 'right' : ''}`}
+          style={{ backgroundColor: color }}>
+          <WrappedComponent {...this.props} />
         </li>
       );
     }

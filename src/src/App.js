@@ -11,18 +11,18 @@ import {
   Test
 } from './components';
 
-const Test1 = scene2dFrame(Test, 'g', 1, { bgColor: '#333' });
-const Test2 = scene2dFrame(Test, 'g', 2, { bgColor: '#666' });
-const Test3 = scene2dFrame(Test, 'g', 3, { bgColor: '#999' });
+const Test1 = scene2dFrame(Test, 'g', 1, '#333');
+const Test2 = scene2dFrame(Test, 'g', 2, '#666');
+const Test3 = scene2dFrame(Test, 'g', 3, '#999');
 
 class App extends Component {
   render() {
     return (
       <div className="root">
         <Scene2d location={{ width: "100vw", height: "100vh" }}>
-          <Test1 />
-          <Test2 />
-          <Test3 />
+          <Test1 styles={{ color: '#ccc' }} />
+          <Test2 styles={{ color: '#999' }} />
+          <Test3 styles={{ color: '#333' }} />
         </Scene2d>
         <PagerIndicator />
         <Pager />

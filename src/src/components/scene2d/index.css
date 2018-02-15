@@ -22,8 +22,3 @@ ul.scene2d>li.left {
 ul.scene2d>li.right {
   left: 100%;
 }
-
-ul.scene2d>li>* {
-  width: 100%;
-  height: 100%;
-}
