@@ -90,6 +90,8 @@ class InternalPager extends Component {
       return;
     }
 
+    this.props.hidePagerSelf();
+    this.props.hideIndicator();
     if (!this.toTheRight) {
       this.props.nextFrame();
     } else {
@@ -100,7 +102,7 @@ class InternalPager extends Component {
 
   render() {
     return (
-      <div>
+      <div className={`${this.props.show ? 'd-block' : 'd-none'}`}>
         <div className="pager working right bottom box"
           ref={elem => { this.client = elem; }}
           // onMouseDown={e => this.start([{ clientX: e.clientX, clientY: e.clientY }])}
@@ -112,12 +114,14 @@ class InternalPager extends Component {
         </div>
         <div className="next mid box working">
           <img src={Next} alt="Next" onClick={e => {
+            this.props.hidePagerSelf();
             this.props.hideIndicator();
             this.props.nextFrame();
           }} />
         </div>
         <div className="pre mid box working">
           <img src={Prev} alt="Prev" onClick={e => {
+            this.props.hidePagerSelf();
             this.props.hideIndicator();
             this.props.prevFrame();
           }} />
@@ -128,13 +132,16 @@ class InternalPager extends Component {
 }
 
 const Pager = connect(
-  null,
+  (store) => ({
+    show: store.indicators.pager
+  }),
   (dispatch) => ({
     toggleIndicator: () => dispatch(toggleIndicator('all')),
     showIndicator: () => dispatch(showIndicator('all')),
     hideIndicator: () => dispatch(hideIndicator('all')),
     nextFrame: () => dispatch(nextFrame('g')),
-    prevFrame: () => dispatch(prevFrame('g'))
+    prevFrame: () => dispatch(prevFrame('g')),
+    hidePagerSelf: () => dispatch(hideIndicator('pager'))
   })
 )(InternalPager);
 

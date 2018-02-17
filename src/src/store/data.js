@@ -7,10 +7,13 @@ export const data = {
     }
   },
   indicators: {
-    all: true
+    all: true,
+    pager: true,
+    load: true
   }
 };
 
 export const purge = (data) => {
+  data.indicators.load = true;
   return data;
 }

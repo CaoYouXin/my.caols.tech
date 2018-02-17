@@ -1,7 +1,26 @@
 .profile {
   padding-top: 80px;
+  overflow: hidden;
 }
 
 .first-title.badge {
   font-size: 1.2rem;
+}
+
+.ani {
+  opacity: 1;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+}
+
+.ani.fade-in-right {
+  opacity: 0;
+  left: -2em;
+}
+
+.ani.fade-in-left {
+  opacity: 0;
+  left: 2em;
 }
