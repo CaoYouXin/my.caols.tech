@@ -13,6 +13,7 @@ ul.scene2d>li {
   height: 100%;
   opacity: 1;
   transition: left 1s;
+  overflow: auto;
 }
 
 ul.scene2d>li.left {

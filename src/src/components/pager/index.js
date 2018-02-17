@@ -26,6 +26,7 @@ class InternalPager extends Component {
     this.props.hideIndicator();
 
     this.endPoint = this.startPoint = touches[0].clientX;
+    this.percentage = 0;
     this.toTheRight = this.startPoint < this.client.clientWidth / 2;
     this.endPointY = this.startPointY = touches[0].clientY;
     this.tapBottom = this.startPointY > this.client.clientHeight * 2 / 3;
