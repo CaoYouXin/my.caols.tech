@@ -3,8 +3,13 @@
   overflow: hidden;
 }
 
+h1.first-title {
+  text-shadow: 0 0 2px #000;
+}
+
 .first-title.badge {
-  font-size: 1.2rem;
+  text-shadow: 0 0 1px #666;
+  font-size: 1rem;
 }
 
 .ani {

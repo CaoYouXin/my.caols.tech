@@ -12,7 +12,7 @@ import {
   Test
 } from './components';
 
-const ProfileFrame = scene2dFrame(Profile, 'g', 1, '#f1f1f1');
+const ProfileFrame = scene2dFrame(Profile, 'g', 1, '#ddd');
 const Test2 = scene2dFrame(Test, 'g', 2, '#666');
 const Test3 = scene2dFrame(Test, 'g', 3, '#999');
 

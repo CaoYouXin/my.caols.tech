@@ -25,7 +25,7 @@ const scene2dFrame = (WrappedComponent, key, idx, color) => {
       return (
         <li className={`${idx < cur ? 'left' : ''} ${idx > cur ? 'right' : ''}`}
           style={{ backgroundColor: color }}>
-          <WrappedComponent {...this.props} />
+          <WrappedComponent {...this.props} load={idx === cur} />
         </li>
       );
     }

@@ -12,6 +12,14 @@ export const indicators = (state = {}, action) => {
       state = { ...state };
       action.keys.forEach((key) => { state[key] = !state[key]; })
       return state;
+    case 'NEXT_SCENE2D_FRAME':
+      state = { ...state };
+      state.load = true;
+      return state;
+    case 'PREV_SCENE2D_FRAME':
+      state = { ...state };
+      state.load = true;
+      return state;
     default:
       return state;
   }

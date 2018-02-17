@@ -19,16 +19,20 @@ class InternalProfile extends Component {
           frame1: true
         });
         self.props.loaded();
-      }, 0, this);
+      }, 618, this);
     }
   }
 
   componentDidMount() {
-    this.pleaseStartAnimation();
+    if (this.props.load === true) {
+      this.pleaseStartAnimation();
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    this.pleaseStartAnimation();
+    if (prevProps.load === false && this.props.load === true) {
+      this.pleaseStartAnimation();
+    }
   }
 
   render() {
@@ -36,7 +40,7 @@ class InternalProfile extends Component {
     return (
       <div className="container profile">
         <div className="d-flex">
-          <h1 className={`align-self-start ani ${frame1 ? '' : 'fade-in-right'}`}>曹力升</h1>
+          <h1 className={`first-title align-self-start ani ${frame1 ? '' : 'fade-in-right'}`}>曹力升</h1>
           <h6 className={`first-title badge badge-warning ml-auto align-self-end ani ${frame1 ? '' : 'fade-in-left'}`}>中南大学2013届毕业生</h6>
         </div>
       </div>
