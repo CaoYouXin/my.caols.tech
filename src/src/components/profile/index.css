@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.title {
+  overflow: hidden;
+}
+
 h1.first-title {
   text-shadow: 0 0 2px #000;
 }
@@ -10,6 +14,27 @@ h1.first-title {
 .first-title.badge {
   text-shadow: 0 0 1px #333;
   font-size: 1rem;
+}
+
+.class-record-title {
+  color: #999;
+  text-shadow: 1px 1px 1px #666;
+}
+
+.class-record-wrapper::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background-color: #d1d1d1;
+}
+
+.class-record-wrapper::-webkit-scrollbar-track {
+  background-color: #d1d1d1;
+}
+
+.class-record-wrapper::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 2px rgba(76, 0, 255, 0.733);
+  background-color: #333;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
 }
 
 .ani {
@@ -28,4 +53,9 @@ h1.first-title {
 .ani.fade-in-left {
   opacity: 0;
   left: 2em;
+}
+
+.ani.fade-in-up {
+  opacity: 0;
+  top: 2em;
 }
