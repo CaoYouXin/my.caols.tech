@@ -46,10 +46,10 @@ class InternalProfile extends Component {
   render() {
     const { frame1, frame2 } = this.state;
     return (
-      <div className="container profile">
+      <div className="container">
         <div className="row">
           <div className="col-12 col-xl-4">
-            <div className="d-flex title">
+            <div className="d-flex profile">
               <h1 className={`first-title align-self-start ani ${frame1 ? '' : 'fade-in-right'}`}>曹力升</h1>
               <h6 className={`first-title badge badge-warning ml-auto align-self-end ani ${frame1 ? '' : 'fade-in-left'}`}>中南大学2013年毕业生</h6>
             </div>
