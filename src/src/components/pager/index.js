@@ -72,8 +72,10 @@ class InternalPager extends Component {
         const dy = Math.abs(this.endPointY - this.startPointY);
         if (dx * dx + dy * dy < 100) {
           this.props.hideIndicator();
+          this.props.hidePagerSelf();
+          this.props.showPagerIndicator();
           console.log('tap success');
-          return;
+          return false;
         }
       }
     }
@@ -141,7 +143,8 @@ const Pager = connect(
     hideIndicator: () => dispatch(hideIndicator('all')),
     nextFrame: () => dispatch(nextFrame('g')),
     prevFrame: () => dispatch(prevFrame('g')),
-    hidePagerSelf: () => dispatch(hideIndicator('pager'))
+    hidePagerSelf: () => dispatch(hideIndicator('pager')),
+    showPagerIndicator: () => dispatch(showIndicator('showPager'))
   })
 )(InternalPager);
 

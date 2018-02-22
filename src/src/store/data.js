@@ -8,6 +8,7 @@ export const data = {
   },
   indicators: {
     all: true,
+    showPager: false,
     pager: true,
     load: true
   }
