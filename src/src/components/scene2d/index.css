@@ -15,7 +15,7 @@ ul.scene2d>li {
   transition: left 1s;
   overflow: auto;
   padding-top: 80px;
-  padding-bottom: 200px;
+  padding-bottom: 80px;
 }
 
 ul.scene2d>li.left {
@@ -24,10 +24,4 @@ ul.scene2d>li.left {
 
 ul.scene2d>li.right {
   left: 100%;
-}
-
-@media (min-width: 768px) {
-  ul.scene2d>li {
-    padding-bottom: 80px;
-  }
 }

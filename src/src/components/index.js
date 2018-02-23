@@ -6,4 +6,3 @@ export * from './profile';
 export * from './restart';
 export * from './scene2d';
 // export * from './techtree';
-export * from './test';

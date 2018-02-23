@@ -27,7 +27,7 @@ const scene2dFrame = (WrappedComponent, key, idx, color) => {
           style={
             moving ? {
               backgroundColor: color,
-              transition: 'all 0s',
+              transition: 'left 0s',
               left: `${((idx - cur) * 100 - percentage).toFixed(2)}%`
             } : {
                 backgroundColor: color
