@@ -16,5 +16,6 @@ export const data = {
 
 export const purge = (data) => {
   data.indicators.load = true;
+  data.animations = {};
   return data;
 }
