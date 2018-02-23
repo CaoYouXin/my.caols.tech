@@ -2,7 +2,7 @@ import './index.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { hideIndicator, nextAnimation } from '../../actions';
+import { hideIndicator, nextAnimation, showIndicator } from '../../actions';
 
 class InternalProfile extends Component {
   constructor(props) {
@@ -26,6 +26,7 @@ class InternalProfile extends Component {
 
   frame2Start() {
     this.props.nextAnimation();
+    setTimeout(this.props.showPager, 1000);
   }
 
   componentDidMount() {
@@ -226,7 +227,8 @@ const Profile = connect(
   }),
   (dispatch) => ({
     loaded: () => dispatch(hideIndicator('load')),
-    nextAnimation: () => dispatch(nextAnimation('profile'))
+    nextAnimation: () => dispatch(nextAnimation('profile')),
+    showPager: () => dispatch(showIndicator('all', 'pager'))
   })
 )(InternalProfile);
 

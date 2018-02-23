@@ -8,7 +8,16 @@ import { connect } from 'react-redux';
 
 // import throttle from 'lodash/throttle';
 
-import { toggleIndicator, showIndicator, hideIndicator, nextFrame, prevFrame } from '../../actions';
+import {
+  toggleIndicator,
+  showIndicator,
+  hideIndicator,
+  nextFrame,
+  prevFrame,
+  sceneUpdatePercentage,
+  sceneStartMoving,
+  sceneEndMoving
+} from '../../actions';
 
 class InternalPager extends Component {
   // constructor(props) {
@@ -24,9 +33,12 @@ class InternalPager extends Component {
 
     this.paging = true;
     this.props.hideIndicator();
+    this.props.startMoving();
+
+    this.percentage = 0;
+    this.props.updatePercentage(this.percentage);
 
     this.endPoint = this.startPoint = touches[0].clientX;
-    this.percentage = 0;
     this.toTheRight = this.startPoint < this.client.clientWidth / 2;
     this.endPointY = this.startPointY = touches[0].clientY;
     this.tapBottom = this.startPointY > this.client.clientHeight * 2 / 3;
@@ -58,13 +70,14 @@ class InternalPager extends Component {
       return;
     }
 
-    this.props.hideIndicator();
     this.percentage = Math.abs(this.endPoint - this.startPoint) * 100 / this.client.clientWidth;
+    this.props.updatePercentage(this.percentage);
     console.log('moving total', this.client.clientWidth, 'at', this.endPoint, 'so', this.percentage.toFixed(2), '%');
   }
 
   end() {
     this.paging = false;
+    this.props.endMoving();
 
     if (this.tapBottom) {
       if (!!this.lastHandled && performance.now() - this.lastHandled < 100) {
@@ -143,6 +156,9 @@ const Pager = connect(
     hideIndicator: () => dispatch(hideIndicator('all')),
     nextFrame: () => dispatch(nextFrame('g')),
     prevFrame: () => dispatch(prevFrame('g')),
+    updatePercentage: (percentage) => dispatch(sceneUpdatePercentage('g', percentage)),
+    startMoving: () => dispatch(sceneStartMoving('g')),
+    endMoving: () => dispatch(sceneEndMoving('g')),
     hidePagerSelf: () => dispatch(hideIndicator('pager')),
     showPagerIndicator: () => dispatch(showIndicator('showPager'))
   })

@@ -21,10 +21,18 @@ const scene2dFrame = (WrappedComponent, key, idx, color) => {
     // }
 
     render() {
-      const { cur } = this.props;
+      const { cur, moving, percentage } = this.props;
       return (
         <li className={`${idx < cur ? 'left' : ''} ${idx > cur ? 'right' : ''}`}
-          style={{ backgroundColor: color }}>
+          style={
+            moving ? {
+              backgroundColor: color,
+              transition: 'all 0s',
+              left: `${((idx - cur) * 100 - percentage).toFixed(2)}%`
+            } : {
+                backgroundColor: color
+              }
+          }>
           <WrappedComponent {...this.props} load={idx === cur} />
         </li>
       );
@@ -32,7 +40,9 @@ const scene2dFrame = (WrappedComponent, key, idx, color) => {
   }
   return connect(
     (store) => ({
-      cur: store.scene2d[key].cur
+      cur: store.scene2d[key].cur,
+      moving: store.scene2d[key].moving && idx - store.scene2d[key].cur <= 1,
+      percentage: store.scene2d[key].percentage
     })
   )(Frame);
 }
