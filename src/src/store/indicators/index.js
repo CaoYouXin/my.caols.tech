@@ -13,12 +13,13 @@ export const indicators = (state = {}, action) => {
       action.keys.forEach((key) => { state[key] = !state[key]; })
       return state;
     case 'NEXT_SCENE2D_FRAME':
-      state = { ...state };
-      state.load = true;
-      return state;
     case 'PREV_SCENE2D_FRAME':
+    case 'NEXT_ANIMATION':
       state = { ...state };
       state.load = true;
+      state.demonstrations = false;
+      state.pager = false;
+      state.pagerHandles = false;
       return state;
     default:
       return state;

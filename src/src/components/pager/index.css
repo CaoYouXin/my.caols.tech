@@ -5,39 +5,20 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
 }
 
-.pager.working {
-  display: block;
-}
-
-.next, .pre {
+.next, .play-pause {
   position: fixed;
   z-index: 999999;
   bottom: 0;
   width: 80px;
   height: 80px;
-  display: none;
 }
 
 .next {
   right: 0;
 }
 
-.pre {
+.play-pause {
   left: 0;
-}
-
-.next.working, .pre.working {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .pager.working {
-    display: none;
-  }
-  .next.working, .pre.working {
-    display: block;
-  }
 }

@@ -40,3 +40,22 @@
   width: 0;
   height: 100%;
 }
+
+/* for small OR large */
+
+.for-small {
+  display: block;
+}
+
+.for-large {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .for-small {
+    display: none;
+  }
+  .for-large {
+    display: block;
+  }
+}

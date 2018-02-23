@@ -7,15 +7,14 @@ export const data = {
     }
   },
   indicators: {
-    all: true,
-    showPager: false,
+    load: false,
     pager: true,
-    load: true
+    pagerHandles: true,
+    demonstrations: true
   }
 };
 
 export const purge = (data) => {
-  data.indicators.load = true;
   data.animations = {};
   return data;
 }

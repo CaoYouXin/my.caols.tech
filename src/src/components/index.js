@@ -1,5 +1,5 @@
 // export * from './contacts';
-export * from './indicators';
+export * from './demonstrations';
 export * from './pager';
 export * from './profile';
 // export * from './projects';

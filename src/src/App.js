@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
-  PagerIndicator,
+  Demonstrations,
   Pager,
   Profile,
   Restart,
@@ -25,7 +25,7 @@ class App extends Component {
           <Test2 styles={{ color: '#999' }} />
           <Test3 styles={{ color: '#333' }} />
         </Scene2d>
-        <PagerIndicator />
+        <Demonstrations />
         <Pager />
         <Restart />
       </div>
