@@ -16,29 +16,36 @@ h1.first-title {
   text-shadow: 1px 1px 1px #666;
 }
 
+.abilities-wrapper {
+  height: 360px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.leetcode-wrapper>*+* {
+  margin-left: 0.6rem;
+}
+
+.leetcode {
+  font-size: 1.1rem;
+  text-shadow: 0 0 1px #000;
+}
+
+.easy.badge {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+.medium.badge {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.hard.badge {
+  color: #fff;
+  background-color: #d9534f;
+}
+
 .class-record-wrapper {
   max-height: calc(100vh - 210px);
-}
-
-.ani {
-  opacity: 1;
-  position: relative;
-  left: 0;
-  top: 0;
-  transition: all 1s;
-}
-
-.ani.fade-in-right {
-  opacity: 0;
-  left: -2em;
-}
-
-.ani.fade-in-left {
-  opacity: 0;
-  left: 2em;
-}
-
-.ani.fade-in-up {
-  opacity: 0;
-  top: 2em;
 }

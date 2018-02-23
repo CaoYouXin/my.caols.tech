@@ -5,42 +5,6 @@
   box-sizing: border-box;
 }
 
-/* box */
-
-.mid.box, .top.box, .bottom.box {
-  text-align: center;
-}
-
-.left.top.box, .left.bottom.box {
-  text-align: left;
-}
-
-.right.top.box, .right.bottom.box {
-  text-align: right;
-}
-
-.box>*, .box:after {
-  display: inline-block;
-}
-
-.mid.box>*, .mid.box:after {
-  vertical-align: middle;
-}
-
-.top.box>*, .top.box:after {
-  vertical-align: top;
-}
-
-.bottom.box>*, .bottom.box:after {
-  vertical-align: bottom;
-}
-
-.box:after {
-  content: '';
-  width: 0;
-  height: 100%;
-}
-
 /* for small OR large */
 
 .for-small {

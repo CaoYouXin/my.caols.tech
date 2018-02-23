@@ -1,4 +1,7 @@
 import './index.css';
+import './animations.css';
+import './box.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
