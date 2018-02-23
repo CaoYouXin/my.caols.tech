@@ -71,7 +71,7 @@ class InternalProfile extends Component {
                 onTransitionEnd={this.props.showPager}>Hard 0</span>
             </div>
           </div>
-          <div className={`d-none d-xl-block col-xl-8 ani ${animations[2] ? '' : 'fade-in-up'}`}>
+          <div className={`d-none d-xl-block col-xl-8 ani ${animations[5] ? '' : 'fade-in-up'}`}>
             <h3 className="class-record-title">我的成绩单</h3>
             <div className="table-responsive class-record-wrapper">
               <Classes />
