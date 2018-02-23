@@ -15,27 +15,27 @@ class Classes extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">1-1-1</th>
             <td>基础英语-1</td>
             <td>92</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">1-2-2</th>
             <td>C/C++程序设计基础</td>
             <td>84</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">1-3-3</th>
             <td>C/C++程序设计实践</td>
             <td>优秀</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">1-4-4</th>
             <td>英语听说-1</td>
             <td>93</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">1-5-5</th>
             <td>计算机系统基础SSD2</td>
             <td>79</td>
@@ -60,32 +60,32 @@ class Classes extends Component {
             <td>英语听说-2</td>
             <td>91</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">3-1-10</th>
             <td>基础英语-3</td>
             <td>81</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">3-2-11</th>
             <td>操作系统</td>
             <td>81</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">3-3-12</th>
             <td>算法分析与设计</td>
             <td>83</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">3-4-13</th>
             <td>汇编语言程序设计</td>
             <td>86</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">3-5-14</th>
             <td>用户界面设计与评价SSD4</td>
             <td>79</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">3-6-15</th>
             <td>软件实用技术实践2</td>
             <td>优秀</td>
@@ -115,27 +115,27 @@ class Classes extends Component {
             <td>编译原理</td>
             <td>86</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">5-1-21</th>
             <td>软件体系结构</td>
             <td>73</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">5-2-22</th>
             <td>科研训练</td>
             <td>良好</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">5-3-23</th>
             <td>软件测试技术</td>
             <td>85</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">5-4-24</th>
             <td>大型数据库技术</td>
             <td>75</td>
           </tr>
-          <tr className="bg-dark text-white">
+          <tr className="my-bg-dark text-white">
             <th scope="row">5-5-25</th>
             <td>软件开发架构平台技术</td>
             <td>77</td>
