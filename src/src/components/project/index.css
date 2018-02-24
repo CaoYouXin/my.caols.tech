@@ -1,5 +1,4 @@
 .project-wrapper {
-  height: 33%;
   padding: 1rem;
   overflow: auto;
 }
@@ -18,6 +17,12 @@
   font-size: 0.618rem;
   color: #fff;
   text-shadow: -1px -1px 1px #666, 0 0 1px rgb(0, 173, 204);
+}
+
+.project-modal-wrapper {
+  min-height: calc(100vh - 160px - 11rem);
+  margin: auto -15px;
+  background-color: #e1e1e1;
 }
 
 .project-icon {

@@ -37,7 +37,7 @@ class InternalProject extends Component {
             <span className="badge badge-warning">{period}</span>
           </div>
         </div>
-        <div className={`d-none d-lg-block ani ${animations[idx] ? '' : 'fade-in'}`}>
+        <div className={`d-none d-lg-block project-modal-wrapper ani ${animations[idx] ? '' : 'fade-in'}`}>
           <ProjectModal {...this.props} />
         </div>
       </div>

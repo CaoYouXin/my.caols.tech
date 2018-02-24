@@ -28,8 +28,8 @@ class InternalProjects extends Component {
   render() {
     const { projects } = this.props;
     return (
-      <div className="projects-wrapper container">
-        <div className="projects-wrapper row">
+      <div className="container">
+        <div className="row">
           {projects.map((pData, i) => (<Project key={pData.project} {...pData} idx={i} last={projects.length - 1} />))}
         </div>
       </div>
