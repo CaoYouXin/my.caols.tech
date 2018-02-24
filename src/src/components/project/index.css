@@ -1,0 +1,53 @@
+.project-wrapper {
+  height: 33%;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.project-inner-wrapper {
+  padding: 1rem;
+  border-bottom: solid 1px #cc0;
+  background-color: #e1e1e1;
+}
+
+.project-inner-wrapper:after {
+  content: '点击查看详情';
+  position: absolute;
+  right: 0.3rem;
+  top: 0.1rem;
+  font-size: 0.618rem;
+  color: #fff;
+  text-shadow: -1px -1px 1px #666, 0 0 1px rgb(0, 173, 204);
+}
+
+.project-icon {
+  width: 100%;
+}
+
+.project.modal-content {
+  margin-top: 90px;
+}
+
+.ani.proj-in {
+  opacity: 0;
+  left: -2em;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  .project-wrapper {
+    height: 100%;
+  }
+  .project-inner-wrapper {
+    min-height: 9rem;
+    pointer-events: none;
+  }
+  .project-inner-wrapper:after {
+    content: '';
+  }
+  .ani.proj-in {
+    opacity: 0;
+    left: 0;
+    top: -2em;
+  }
+}
