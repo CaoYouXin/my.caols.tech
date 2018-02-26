@@ -5,6 +5,12 @@
 .tech-tree {
   height: 50%;
   transform: scale3d(1, 1, 1);
+  opacity: 1;
+  transition: opacity 1.618s;
+}
+
+.tech-tree.fade-in {
+  opacity: 0;
 }
 
 .tech-tree:nth-child(1) {
