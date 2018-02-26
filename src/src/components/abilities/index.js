@@ -10,7 +10,10 @@ class Abilities extends Component {
 
   toColor(i, size) {
     var x = 1 + (size - i) * 2 / size;
-    return `rgba(${~~(this.baseStroke[0] / x)}, ${~~(this.baseStroke[1] / x)}, ${~~(this.baseStroke[2] / x)}, ${this.baseStroke[3]})`;
+    return `rgba(${~~(this.baseStroke[0] / x)}, 
+      ${~~(this.baseStroke[1] / x)}, 
+      ${~~(this.baseStroke[2] / x)}, 
+      ${this.baseStroke[3]})`;
   }
 
   render() {
@@ -23,10 +26,10 @@ class Abilities extends Component {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
         <defs>
           <radialGradient id="exampleGradient">
-            <stop offset="10%" stop-color="Indigo" />
-            <stop offset={`${(86 / Math.sqrt(2)).toFixed(2)}%`} stop-color="DeepSkyBlue" />
-            <stop offset={`${(98 / Math.sqrt(2)).toFixed(2)}%`} stop-color="#eee" />
-            <stop offset={`${(100 / Math.sqrt(2)).toFixed(2)}%`} stop-color="#ddd" />
+            <stop offset="10%" stopColor="Indigo" />
+            <stop offset={`${(86 / Math.sqrt(2)).toFixed(2)}%`} stopColor="DeepSkyBlue" />
+            <stop offset={`${(98 / Math.sqrt(2)).toFixed(2)}%`} stopColor="#eee" />
+            <stop offset={`${(100 / Math.sqrt(2)).toFixed(2)}%`} stopColor="#ddd" />
           </radialGradient>
         </defs>
         <g transform="translate(150, 150)">
@@ -40,9 +43,11 @@ class Abilities extends Component {
             L0 ${r}
             L-${r * sinThirdPI} ${r * cosThirdPI}
             L-${r * sinThirdPI} -${r * cosThirdPI}z`} />))}
-          {as.map((a, i) => (<text className="abilities-text" key={a} x={`${130 * Math.cos(i * Math.PI / 3 - Math.PI / 2) - a.length * 8}`}
-            y={`${130 * Math.sin(i * Math.PI / 3 - Math.PI / 2) + 7}`} textLength={`${a.length * 16}`}>{a}</text>))}
-          <path fill="transparent" stroke="white" stroke-width="2" d={`M0 -${100 * ps[0] / 5}
+          {as.map((a, i) => (<text className="abilities-text" key={a}
+            x={`${130 * Math.cos(i * Math.PI / 3 - Math.PI / 2) - a.length * 8}`}
+            y={`${130 * Math.sin(i * Math.PI / 3 - Math.PI / 2) + 7}`}
+            textLength={`${a.length * 16}`}>{a}</text>))}
+          <path fill="transparent" stroke="white" strokeWidth="2" d={`M0 -${100 * ps[0] / 5}
             L${100 * ps[1] / 5 * sinThirdPI} -${100 * ps[1] / 5 * cosThirdPI}
             L${100 * ps[2] / 5 * sinThirdPI} ${100 * ps[2] / 5 * cosThirdPI}
             L0 ${100 * ps[3] / 5}

@@ -1,0 +1,111 @@
+.tech-tree-wrapper {
+  height: 100%;
+}
+
+.tech-tree {
+  height: 50%;
+}
+
+.tech-tree:nth-child(1) {
+  background-color: cornsilk;
+}
+
+.tech-tree:nth-child(2) {
+  background-color: seagreen;
+}
+
+.tech-tree:nth-child(3) {
+  background-color: blueviolet;
+}
+
+.tech-tree:nth-child(4) {
+  background-color: saddlebrown;
+}
+
+.tech-tree:before {
+  position: absolute;
+  font-size: 0.618rem;
+  color: #fff;
+  text-shadow: -1px -1px 1px #666, 0 0 1px rgb(0, 173, 204);
+}
+
+/* .tech-tree:nth-child(1):before {
+  content: '点击';
+  right: 0.3rem;
+  bottom: 0.1rem;
+}
+
+.tech-tree:nth-child(2):before {
+  content: '查看';
+  left: 0.3rem;
+  bottom: 0.1rem;
+}
+
+.tech-tree:nth-child(3):before {
+  content: '详细';
+  right: 0.3rem;
+  top: 0.1rem;
+}
+
+.tech-tree:nth-child(4):before {
+  content: '内容';
+  left: 0.3rem;
+  top: 0.1rem;
+} */
+
+.tech-tree>.badge {
+  position: relative;
+  font-size: 1.618em;
+  color: #111;
+  text-shadow: 0 0 1px #000;
+}
+
+.tech-tree>.line {
+  position: absolute;
+}
+
+.tech-tree>.bg.line {
+  background-color: gray;
+}
+
+.tech-tree>.ft.line {
+  transform: scale3d(1, 1, 1);
+  background-color: gold;
+  box-shadow: 0 0 1px 1px goldenrod;
+}
+
+.tech-tree.trans>.ft.line {
+  transform: scale3d(0, 0, 0);
+}
+
+.tech-tree>.horizontal.line {
+  width: 50%;
+  height: 2px;
+  top: calc(50% - 1px);
+}
+
+.tech-tree>.vertical.line {
+  width: 2px;
+  height: 50%;
+  left: calc(50% - 1px);
+}
+
+.tech-tree:nth-child(1)>.horizontal.line, .tech-tree:nth-child(3)>.horizontal.line {
+  left: 50%;
+  transform-origin: 0 50% 0;
+}
+
+.tech-tree:nth-child(2)>.horizontal.line, .tech-tree:nth-child(4)>.horizontal.line {
+  left: 0;
+  transform-origin: 100% 50% 0;
+}
+
+.tech-tree:nth-child(1)>.vertical.line, .tech-tree:nth-child(2)>.vertical.line {
+  top: 50%;
+  transform-origin: 50% 0 0;
+}
+
+.tech-tree:nth-child(3)>.vertical.line, .tech-tree:nth-child(4)>.vertical.line {
+  top: 0;
+  transform-origin: 50% 100% 0;
+}
