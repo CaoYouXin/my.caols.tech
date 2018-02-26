@@ -4,21 +4,26 @@
 
 .tech-tree {
   height: 50%;
+  transform: scale3d(1, 1, 1);
 }
 
 .tech-tree:nth-child(1) {
+  transform-origin: 0 0 0;
   background-color: cornsilk;
 }
 
 .tech-tree:nth-child(2) {
+  transform-origin: 100% 0 0;
   background-color: seagreen;
 }
 
 .tech-tree:nth-child(3) {
+  transform-origin: 0 100% 0;
   background-color: blueviolet;
 }
 
 .tech-tree:nth-child(4) {
+  transform-origin: 100% 100% 0;
   background-color: saddlebrown;
 }
 
@@ -29,7 +34,7 @@
   text-shadow: -1px -1px 1px #666, 0 0 1px rgb(0, 173, 204);
 }
 
-/* .tech-tree:nth-child(1):before {
+.tech-tree:nth-child(1):before {
   content: '点击';
   right: 0.3rem;
   bottom: 0.1rem;
@@ -51,7 +56,14 @@
   content: '内容';
   left: 0.3rem;
   top: 0.1rem;
-} */
+}
+
+.tech-tree.focused {
+  position: relative;
+  z-index: 1;
+  transition: transform 1s;
+  transform: scale3d(2, 2, 1);
+}
 
 .tech-tree>.badge {
   position: relative;
@@ -64,17 +76,23 @@
   position: absolute;
 }
 
+.tech-tree.focused>*, .tech-tree.focused:before {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
 .tech-tree>.bg.line {
   background-color: gray;
 }
 
 .tech-tree>.ft.line {
+  transition: transform 1.618s;
   transform: scale3d(1, 1, 1);
   background-color: gold;
   box-shadow: 0 0 1px 1px goldenrod;
 }
 
-.tech-tree.trans>.ft.line {
+.tech-tree.trans>.ft.line, .tech-tree.focused>.ft.line {
   transform: scale3d(0, 0, 0);
 }
 
