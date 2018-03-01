@@ -6,7 +6,7 @@ export const wrapAnimation = (key, idx, count, o, oC, cb) => {
   self.wao[idx] = self.wao[idx] || [];
   self.wao[idx][o] = (self.wao[idx][o] || 0) + 1;
 
-  console.log(new Date(), JSON.parse(JSON.stringify(self)));
+  // console.log(new Date(), JSON.parse(JSON.stringify(self)));
   if (self.wao[idx][o] < oC) {
     return;
   }

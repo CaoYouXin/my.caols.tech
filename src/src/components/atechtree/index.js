@@ -12,13 +12,13 @@ class AInternalTechTree extends Component {
     const landscape = width > height;
     const maxFromLen = from.map(f => countWidth(f, "normal 16px arial")).reduce((c, p) => c < p ? p : c, 0);
     const maxToLen = to.map(t => countWidth(t, "normal 16px arial")).reduce((c, p) => c < p ? p : c, 0);
-    const maxWidth = ((maxFromLen > maxToLen ? maxFromLen : maxToLen) + 100 + (landscape ? 0 : 40)) * 2;
+    const maxWidth = ((maxFromLen > maxToLen ? maxFromLen : maxToLen) + 150 + (landscape ? 0 : 40)) * 2;
     const maxHeight = (from.length > to.length ? from.length : to.length) * 40 + (landscape ? 0 : (maxFromLen + maxToLen));
     const viewWidth = landscape ? (width > maxWidth ? width : maxWidth) : (width > maxHeight ? width : maxHeight);
     const viewHeight = landscape ? (height > maxHeight ? height : maxHeight) : (height > maxWidth ? height : maxWidth);
     return (
       <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox={`0 0 ${viewWidth} ${viewHeight}`}>
-        <g transform={`translate(${viewWidth / 2}, 0) rotate(${landscape ? 0 : -90}, 0, ${viewHeight / 2})`}>
+        <g className="a-tech-tree" transform={`translate(${viewWidth / 2}, 0) rotate(${landscape ? 0 : -90}, 0, ${viewHeight / 2})`}>
           <g transform={`translate(-${maxFromLen / 2 + 100}, 0)`}>
             {
               from.map((f, i) => {
@@ -49,7 +49,7 @@ class AInternalTechTree extends Component {
               })
             }
           </g>
-          <g className="a-tech-tree-line">
+          <g>
             {
               lines.map(line => {
                 const midY1 = (line[0] + 0.5 - from.length / 2) * 40 + viewHeight / 2;
