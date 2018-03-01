@@ -52,9 +52,51 @@ export const data = {
     null,
     {
       from: ['网络', '界面', '动画', '交互'],
-      to: ['fetchAPIs'],
+      to: ['fetchAPIs', 'RestKit', 'Retrofit', 'Bootstrap4', 'SemanticUI', 'D3', 'TweenJS', 'HammerJS'],
       lines: [
-        [0, 0]
+        [0, 0],
+        [0, 1],
+        [0, 2],
+        [1, 3],
+        [1, 4],
+        [2, 5],
+        [2, 6],
+        [3, 7]
+      ]
+    },
+    {
+      from: ['网络', '数据库', '线程池', '安全', '监控'],
+      to: ['HttpComponent', 'JPA', 'Excutors', 'Spring Security', 'Spring Actuator'],
+      lines: [
+        [0, 0],
+        [1, 1],
+        [2, 2],
+        [3, 3],
+        [4, 4]
+      ]
+    },
+    {
+      from: ['bash'],
+      to: ['rsync', 'ssh u@ip "bash -s" < b.sh &', 'nohup', 'curl', 'jq'],
+      lines: [
+        [0, 0],
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [0, 4]
+      ]
+    },
+    {
+      from: ['敏捷开发'],
+      to: ['故事', '需求', '例会', '代码', '测试', '燃尽图', 'Bug'],
+      lines: [
+        [0, 0],
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [0, 4],
+        [0, 5],
+        [0, 6]
       ]
     }
   ]
