@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { nextAnimation, showIndicator } from '../../actions';
 import { wrapAnimation } from '../../utils';
 
+import { ATechTree } from '../atechtree';
+
 class InternalTechTree extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +48,7 @@ class InternalTechTree extends Component {
     const { animations } = this.props;
     const { focused } = this.state;
     return (
-      <div className="container tech-tree-wrapper">
+      <div className="container tech-tree-wrapper" ref={elem => { this.containerElem = elem; }}>
         <div className="row tech-tree-wrapper">
           <div className={`col-6 tech-tree mid box ${animations[0] ? '' : 'fade-in'} ${animations[1] ? '' : 'trans'} ${focused === 1 ? 'focused' : ''}`}
             onClick={e => { if (focused >= 0) this.setState({ focused: focused <= 0 ? 1 : 0 }); }}
@@ -85,7 +87,12 @@ class InternalTechTree extends Component {
             <span className="badge badge-warning">管理</span>
           </div>
         </div>
-      </div >
+        <div className={`atechtree ${focused > 0 ? 'show' : ''}`}>
+          <ATechTree focused={focused}
+            width={!this.containerElem ? 0 : this.containerElem.offsetWidth}
+            height={!this.containerElem ? 0 : this.containerElem.offsetHeight} />
+        </div>
+      </div>
     );
   }
 }

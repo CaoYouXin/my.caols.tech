@@ -47,6 +47,16 @@ export const data = {
       tags: ['JavaSE', 'MVC', 'MySQL'],
       value: '2013\\广州\\10W/年'
     }
+  ],
+  techtrees: [
+    null,
+    {
+      from: ['网络', '界面', '动画', '交互'],
+      to: ['fetchAPIs'],
+      lines: [
+        [0, 0]
+      ]
+    }
   ]
 };
 
