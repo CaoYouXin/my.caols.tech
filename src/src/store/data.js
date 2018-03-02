@@ -99,6 +99,57 @@ export const data = {
         [0, 6]
       ]
     }
+  ],
+  article: [
+    { type: 'title', value: '我的自述' },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '原本要做以个动画、图形为主的网站,但是到头来还是免不了写些文字说明.' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '这是我的' },
+        { type: 'bold', value: '一份个人简历' },
+        { type: 'text', value: '.' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '第 1 页说明我的基本信息,虽然课程并不是最优,但是可以看出我热爱我的专业;虽然不擅长算法,但是仍然在通过' },
+        { type: 'bold', value: 'leetcode' },
+        { type: 'text', value: '努力.' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '第 2 页说明我的工作经历,本来第一份工作已经可以让我按部就班的生活,但是直到现在我的生活发生过多次变故.至于我现在的求职心态稍后打印出来.' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '第 3 页说明我的职业素养,显然由于多次变故,经历的岗位比较丰富.需要说明的是,我最热爱的是' },
+        { type: 'bold', value: 'Web前端技术' },
+        { type: 'text', value: '.' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '当前页还是要请你耐心看完的,因为后面还有一页-我的联系方式' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '目前我将生活分为' },
+        { type: 'bold', value: '个人目标、个人使命、兴趣爱好' },
+        { type: 'text', value: '三部分.我的目标是获得更好的收入来体验更优质的生活(车、房),使命是希望人类可以像三体人那样用脑电波交流、并减少幻觉对人类的困扰,而兴趣爱好则是呼吸吐纳、入静养神.' }
+      ]
+    },
+    {
+      type: 'paragraph', value: [
+        { type: 'text', value: '好了,了解过我之后,愿不愿意跳转到最后一页好联系到我加入你们呢?' }
+      ]
+    }
   ]
 };
 

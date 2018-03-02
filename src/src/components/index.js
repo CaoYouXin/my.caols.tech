@@ -1,3 +1,4 @@
+export * from './article';
 // export * from './contacts';
 export * from './demonstrations';
 export * from './pager';

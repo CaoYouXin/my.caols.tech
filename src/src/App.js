@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
+  Article,
   Demonstrations,
   Pager,
   Profile,
@@ -16,6 +17,7 @@ import {
 const ProfileFrame = scene2dFrame(Profile, 'g', 1, '#ddd');
 const ProjectsFrame = scene2dFrame(Projects, 'g', 2, '#eee');
 const TechTreeFrame = scene2dFrame(TechTree, 'g', 3, '#ddd');
+const ArticleFrame = scene2dFrame(Article, 'g', 4, '#eee');
 
 class App extends Component {
   render() {
@@ -25,6 +27,7 @@ class App extends Component {
           <ProfileFrame />
           <ProjectsFrame />
           <TechTreeFrame />
+          <ArticleFrame />
         </Scene2d>
         <Demonstrations />
         <Pager />

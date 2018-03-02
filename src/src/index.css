@@ -23,3 +23,14 @@
     display: block;
   }
 }
+
+/* commons */
+
+@keyframes bling {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

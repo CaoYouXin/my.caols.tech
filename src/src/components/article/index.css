@@ -1,0 +1,30 @@
+.article-wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.bg-article {
+  opacity: 0.382;
+  filter: blur(.2em);
+  user-select: none;
+  text-shadow: 0 0 1px blueviolet;
+}
+
+.ft-article {
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+.article-printing:after {
+  content: "|";
+  animation: 0.5s linear 0s infinite alternate both running bling;
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
