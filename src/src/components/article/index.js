@@ -175,7 +175,7 @@ class InternalArticle extends Component {
           }
         </div>
         <div className={`handle mid box ${printing ? 'd-none' : 'd-block'}`}>
-          <button type="button" class="btn btn-primary" onClick={e => this.startTick()}>开始阅读</button>
+          <button type="button" className="btn btn-primary" onClick={e => this.startTick()}>开始阅读</button>
         </div>
       </div>
     );

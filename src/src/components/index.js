@@ -1,5 +1,5 @@
 export * from './article';
-// export * from './contacts';
+export * from './contacts';
 export * from './demonstrations';
 export * from './pager';
 export * from './profile';
