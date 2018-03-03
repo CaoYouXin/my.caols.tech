@@ -19,7 +19,7 @@ class Contacts extends Component {
     const { cur, data } = this.state;
     return (
       <div className="container">
-        <div className="carousel slide" data-ride="carousel">
+        <div className="carousel slide">
           <ol className="carousel-indicators">
             {
               data.map((d, i) => (<li key={i} data-slide-to={i} className={`${cur === i ? "active" : ""}`}></li>))
@@ -38,22 +38,22 @@ class Contacts extends Component {
               ))
             }
           </div>
-          <a className="carousel-control-prev" role="button" data-slide="prev"
+          <a className="carousel-control-prev" role="button"
             onClick={e => {
               if (cur > 0) {
                 this.setState({ cur: cur - 1 });
               }
             }}>
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="carousel-control-prev-icon"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" role="button" data-slide="next"
+          <a className="carousel-control-next" role="button"
             onClick={e => {
               if (cur < data.length - 1) {
                 this.setState({ cur: cur + 1 });
               }
             }}>
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="carousel-control-next-icon"></span>
             <span className="sr-only">Next</span>
           </a>
         </div>
