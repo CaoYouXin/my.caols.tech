@@ -21,7 +21,7 @@ import {
 class InternalPager extends Component {
   start(touches) {
     if (touches.length !== 1) {
-      console.log('not right');
+      // console.log('not right');
       return;
     }
 
@@ -37,7 +37,7 @@ class InternalPager extends Component {
     this.endPointY = this.startPointY = touches[0].clientY;
     this.tapBottom = this.startPointY > this.client.clientHeight * 2 / 3;
     this.lastHandled = performance.now();
-    console.log('start total', this.client.clientWidth, 'at', this.startPoint, 'to the', this.toTheRight ? 'right' : 'left', 'tap bottom', this.tapBottom ? 'y' : 'n');
+    // console.log('start total', this.client.clientWidth, 'at', this.startPoint, 'to the', this.toTheRight ? 'right' : 'left', 'tap bottom', this.tapBottom ? 'y' : 'n');
   }
 
   moving(touches) {
@@ -51,7 +51,7 @@ class InternalPager extends Component {
     this.lastHandled = performance.now();
 
     if (touches.length !== 1) {
-      console.log('end early');
+      // console.log('end early');
       this.end();
       return;
     }
@@ -59,7 +59,7 @@ class InternalPager extends Component {
     this.endPoint = touches[0].clientX;
     this.endPointY = touches[0].clientY;
     if ((this.endPoint > this.startPoint) !== this.toTheRight) {
-      console.log('imposible', 'sending ZERO');
+      // console.log('imposible', 'sending ZERO');
       this.end();
       return;
     }
@@ -68,7 +68,7 @@ class InternalPager extends Component {
     if (!this.toTheRight) {
       this.props.updatePercentage(this.percentage);
     }
-    console.log('moving total', this.client.clientWidth, 'at', this.endPoint, 'so', this.percentage.toFixed(2), '%');
+    // console.log('moving total', this.client.clientWidth, 'at', this.endPoint, 'so', this.percentage.toFixed(2), '%');
   }
 
   end() {
@@ -77,13 +77,13 @@ class InternalPager extends Component {
 
     if ((this.endPoint > this.startPoint) !== this.toTheRight) {
       this.props.showDemonstrations();
-      console.log('imposible', 'sending ZERO');
+      // console.log('imposible', 'sending ZERO');
       return;
     }
 
     if (this.percentage < 36) {
       this.props.showDemonstrations();
-      console.log('end', 'BUT not enough', 'sending ZERO');
+      // console.log('end', 'BUT not enough', 'sending ZERO');
       return;
     }
 
@@ -92,7 +92,7 @@ class InternalPager extends Component {
     } else {
       this.props.showDemonstrations();
     }
-    console.log('end', 'go to the', this.toTheRight ? 'RIGHT' : 'LEFT', 'end');
+    // console.log('end', 'go to the', this.toTheRight ? 'RIGHT' : 'LEFT', 'end');
   }
 
   render() {
