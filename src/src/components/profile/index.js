@@ -43,10 +43,10 @@ class InternalProfile extends Component {
               <Abilities />
             </div>
             <div className="leetcode-wrapper mid box">
-              <span className={`leetcode ani ${animations[2] ? '' : 'fade-in'}`}
-                onTransitionEnd={e => wrapAnimation('profile', 2, 1, 0, 1, nextAnimation)}><a href="https://leetcode.com/">LeetCode</a>进度</span>
+              <span className={`leetcode badge ani ${animations[2] ? '' : 'fade-in'}`}
+                onTransitionEnd={e => wrapAnimation('profile', 2, 1, 0, 1, nextAnimation)}><a href="https://leetcode.com/">LeetCode</a> Solved</span>
               <span className={`badge easy ani ${animations[3] ? '' : 'fade-in'}`}
-                onTransitionEnd={e => wrapAnimation('profile', 3, 1, 0, 1, nextAnimation)}>Easy 34</span>
+                onTransitionEnd={e => wrapAnimation('profile', 3, 1, 0, 1, nextAnimation)}>Easy 39</span>
               <span className={`badge medium ani ${animations[4] ? '' : 'fade-in'}`}
                 onTransitionEnd={e => wrapAnimation('profile', 4, 1, 0, 1, nextAnimation)}>Medium 5</span>
               <span className={`badge hard ani ${animations[5] ? '' : 'fade-in'}`}

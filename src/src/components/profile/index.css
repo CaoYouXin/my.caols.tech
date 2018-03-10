@@ -26,9 +26,14 @@ h1.first-title {
   margin-left: 0.6rem;
 }
 
-.leetcode {
-  font-size: 1.1rem;
-  text-shadow: 0 0 1px #000;
+.leetcode.badge {
+  color: #fff;
+  background-color: #337ab7;
+  text-shadow: 0 0 1px #ddd;
+}
+
+.leetcode.badge>a {
+  color: #f1f1f1;
 }
 
 .easy.badge {
