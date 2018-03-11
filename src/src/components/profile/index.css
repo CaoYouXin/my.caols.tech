@@ -23,15 +23,14 @@ h1.first-title {
 }
 
 .leetcode-wrapper>*+.badge {
-  margin-left: 0.3rem;
+  margin-left: 0.3em;
 }
 
 .leetcode-wrapper>.badge {
   color: #fff;
-  font-size: 0.5rem;
-  line-height: 1.5em;
-  padding: 0 0.382em;
-  border-radius: 0.75em;
+  line-height: 1.8em;
+  padding: 0 0.3em;
+  border-radius: 0.9em;
 }
 
 .leetcode.badge {
