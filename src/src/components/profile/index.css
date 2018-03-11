@@ -22,12 +22,19 @@ h1.first-title {
   text-align: center;
 }
 
-.leetcode-wrapper>*+* {
-  margin-left: 0.6rem;
+.leetcode-wrapper>*+.badge {
+  margin-left: 0.3rem;
+}
+
+.leetcode-wrapper>.badge {
+  color: #fff;
+  font-size: 0.5rem;
+  line-height: 1.5em;
+  padding: 0 0.382em;
+  border-radius: 0.75em;
 }
 
 .leetcode.badge {
-  color: #fff;
   background-color: #337ab7;
   text-shadow: 0 0 1px #ddd;
 }
@@ -37,17 +44,14 @@ h1.first-title {
 }
 
 .easy.badge {
-  color: #fff;
   background-color: #5cb85c;
 }
 
 .medium.badge {
-  color: #fff;
   background-color: #f0ad4e;
 }
 
 .hard.badge {
-  color: #fff;
   background-color: #d9534f;
 }
 
