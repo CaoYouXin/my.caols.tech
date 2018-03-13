@@ -21,7 +21,7 @@ class Abilities extends Component {
     const cosThirdPI = Math.cos(Math.PI / 3);
     const rs = [100, 80, 60, 40, 20];
     const as = ['程序设计', '算法', '数据库', '编程框架', '单元测试', '英文'];
-    const ps = [5, 3, 4, 4, 3, 4];
+    const ps = [4.8, 3.6, 4, 4.5, 3.2, 4.5];
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
         <defs>
