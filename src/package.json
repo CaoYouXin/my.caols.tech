@@ -1,6 +1,6 @@
 {
   "name": "src",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
