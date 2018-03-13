@@ -47,7 +47,19 @@ class Abilities extends Component {
             x={`${130 * Math.cos(i * Math.PI / 3 - Math.PI / 2) - a.length * 8}`}
             y={`${130 * Math.sin(i * Math.PI / 3 - Math.PI / 2) + 7}`}
             textLength={`${a.length * 16}`}>{a}</text>))}
-          <path fill="transparent" stroke="white" strokeWidth="2" d={`M0 -${100 * ps[0] / 5}
+          <path fill="transparent" style={{ opacity: 0.3 }} stroke="white" strokeWidth="3" d={`M0 -${100 * ps[0] / 5}
+              L${100 * ps[1] / 5 * sinThirdPI} -${100 * ps[1] / 5 * cosThirdPI}
+              L${100 * ps[2] / 5 * sinThirdPI} ${100 * ps[2] / 5 * cosThirdPI}
+              L0 ${100 * ps[3] / 5}
+              L-${100 * ps[4] / 5 * sinThirdPI} ${100 * ps[4] / 5 * cosThirdPI}
+              L-${100 * ps[5] / 5 * sinThirdPI} -${100 * ps[5] / 5 * cosThirdPI}z`} />
+          <path fill="transparent" style={{ opacity: 0.4 }} stroke="white" strokeWidth="2" d={`M0 -${100 * ps[0] / 5}
+            L${100 * ps[1] / 5 * sinThirdPI} -${100 * ps[1] / 5 * cosThirdPI}
+            L${100 * ps[2] / 5 * sinThirdPI} ${100 * ps[2] / 5 * cosThirdPI}
+            L0 ${100 * ps[3] / 5}
+            L-${100 * ps[4] / 5 * sinThirdPI} ${100 * ps[4] / 5 * cosThirdPI}
+            L-${100 * ps[5] / 5 * sinThirdPI} -${100 * ps[5] / 5 * cosThirdPI}z`} />
+          <path fill="transparent" style={{ opacity: 0.8 }} stroke="white" strokeWidth="1" d={`M0 -${100 * ps[0] / 5}
             L${100 * ps[1] / 5 * sinThirdPI} -${100 * ps[1] / 5 * cosThirdPI}
             L${100 * ps[2] / 5 * sinThirdPI} ${100 * ps[2] / 5 * cosThirdPI}
             L0 ${100 * ps[3] / 5}
